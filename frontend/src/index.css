@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@import "tailwindcss";
+
+@theme{
+    --color-neutral-0: #fff;
+    --color-neutral-50: #f5f7fa;
+    --color-neutral-100: #f3f5f8;
+    --color-neutral-200: #e0e4ea;
+    --color-neutral-300: #cacfd8;
+    --color-neutral-400: #232530;
+    --color-neutral-500: #717784;
+    --color-neutral-600: #525866;
+    --color-neutral-700: #2b303b;
+    --color-neutral-800: #232530;
+    --color-neutral-900: #191b25;
+    --color-neutral-950: #0e121b;
+    --color-btn-hover: #f1f5f9;
+    --color-borderClr: #e2e8f0;
+    --color-borderClr-hover: #e2e8f0;
+
+    --color-blue-500: #335cff;
+    --color-red-500: #fb3748;
+    --color-accent: #f1f5f9;
+    --color-muted-foreground: hsl(215.4 16.3% 46.9%);
+    --color-primary-foreground: hsl(210 40% 98%);
+}
+
+.dark{
+    --color-neutral-0: #0e121b;
+    --color-neutral-50: #64748b;
+    --color-neutral-100: #232530;
+    --color-neutral-200: #232530;  
+    --color-neutral-300: #2b303b;
+    --color-neutral-400: #e0e4ea;
+    --color-neutral-500: #717784;
+    --color-neutral-600: #fff;    
+    --color-neutral-700: #e0e4ea;
+    --color-neutral-950: #fff;
+    --color-borderClr: #2d3748;
+    --color-borderClr-hover: #525866;
+    --color-btn-hover: #1e293b;
+    --color-muted-foreground: #64748b;
+    --color-blue-500: #335cff;
+    --color-red-500: #fb3748;
+}
+
+.sans-serif{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* font-weight: <weight>; */
+}
+
+.noto-serif{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* font-weight: <weight>; */
+}
+
+.monospace{
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* font-weight: <weight>; */
+}
+
+.loader {
+    /* width: 48px;
+  height: 48px;
+  border: 3px solid #FFF;
+  border-radius: 50%; */
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 40px;
+  height: 40px; */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 7px solid;
+  /* border-color: #FF3D00 transparent; */
+  border-color: #335cff transparent;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+    }
+} 
