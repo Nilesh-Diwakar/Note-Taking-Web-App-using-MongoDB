@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 3000;
 const FRONTEND_URL = process.env.FRONTEND_URL;
 
 // middleWare
+app.set("trust proxy", 1);
 app.use(express.json());
 app.use(cookieParser()); // ✅ Enable reading cookies from client
 app.use(cors({

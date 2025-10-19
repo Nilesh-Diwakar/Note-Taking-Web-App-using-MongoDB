@@ -1,5 +1,6 @@
 
 
+
 const User = require("../models/userModel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -12,8 +13,8 @@ const sendTokenCookie = (res, user) => {
 
     res.cookie("token", token, {
         httpOnly: true,       // cannot be accessed by JS
-        secure: false,        // set true in production (HTTPS)
-        sameSite: "lax",      // CSRF protection
+        secure: true,        // ✅ must be true for HTTPS (Render uses HTTPS)
+        sameSite: "None",    // ✅ allows cross-origin cookies (Render ↔ Vercel)
         maxAge: 24 * 60 * 60 * 1000 // 1 day
     });
 
@@ -122,8 +123,8 @@ exports.logout = async (req, res) => {
     res.cookie("token", "", {
         httpOnly: true,
         expires: new Date(0),
-        sameSite: "lax"
+        sameSite: "None",
+        secure: true,
     });
     res.status(200).json({ success: true, message: "Logged out successfully" });
 };
-
