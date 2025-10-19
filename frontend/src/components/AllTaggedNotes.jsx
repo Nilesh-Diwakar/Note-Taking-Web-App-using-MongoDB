@@ -29,7 +29,7 @@ function AllTaggedNotes({tagName, archive}) {
   return (
     <div className='w-full flex flex-col divide-y divide-neutral-300'>
         {
-            filteredNotes ?
+            filteredNotes.length > 0 ?
             (
                 filteredNotes.map((obj) => (
                     <NavLink to={archive? `/archives/${obj._id}` : `/notes/${obj._id}`} key={obj._id} className="flex flex-col rounded-lg p-2 space-y-3">
