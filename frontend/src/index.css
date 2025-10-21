@@ -22,6 +22,7 @@
     --color-borderClr-hover: #e2e8f0;
 
     --color-blue-500: #335cff;
+    --color-guestUser: #1e293b;
     --color-red-500: #fb3748;
     --color-accent: #f1f5f9;
     --color-muted-foreground: hsl(215.4 16.3% 46.9%);
@@ -44,6 +45,7 @@
     --color-btn-hover: #1e293b;
     --color-muted-foreground: #64748b;
     --color-blue-500: #335cff;
+    --color-guestUser: #335cff;
     --color-red-500: #fb3748;
 }
 

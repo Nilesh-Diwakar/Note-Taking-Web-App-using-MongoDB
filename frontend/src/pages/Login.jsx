@@ -87,6 +87,16 @@ export default function Login() {
           Login
         </button>
 
+        <button
+          type="submit"
+          className="w-full mt-3 flex items-center justify-center gap-2 border border-guestUser text-blue-600 font-medium py-2 rounded-lg hover:bg-neutral-500 cursor-pointer"
+          onClick={() => {setFormData({ email: "guest@example.xyz", password: "guest@example.xyz" })}}
+        >
+          <Icons.User className="w-4 h-4 fill-red-500" />
+          Continue as Guest
+        </button>
+
+
         <p className="text-sm text-center mt-3">
           Don’t have an account?{" "}
           <NavLink to="/signup" className="text-blue-500 hover:underline">
